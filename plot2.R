@@ -15,9 +15,10 @@ f.data<-data[friday,]
 days<-rbind(t.data,f.data)
 
 
-
+png('plot2.png')
 #creating plot 2
 days$Date<-format(days$Date,"%A %B %Y")
 bdays = c('Thu','Fri','Sat')
 plot(days$Global_active_power,type ='l',xaxt ='n',ylab = 'Global Active Power (kilowatts)')
 axis(1,at = c(0,1500,2880),length(days$Date),labels = bdays)
+dev.off()
