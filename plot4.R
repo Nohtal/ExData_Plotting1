@@ -15,7 +15,7 @@ f.data<-data[friday,]
 days<-rbind(t.data,f.data)
 
 
-
+png('plot4.png')
 #creating plot 4
 
 par(mfrow = c(2,2))
@@ -38,4 +38,4 @@ legend('topright',lty = c(1,1,1),
 
 plot(days$Global_reactive_power,type ='l',xaxt ='n',ylab = 'Global_reactive_power',xlab = 'datetime')
 axis(1,at = c(0,1500,2880),length(days$Date),labels = bdays)
-
+dev.off()
