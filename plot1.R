@@ -15,7 +15,7 @@ f.data<-data[friday,]
 days<-rbind(t.data,f.data)
 
 
-png('plot1.png')
+png('plot1.png', width = 480, height = 480)
 #creating plot 1
 hist(days$Global_active_power,col = 'red',xlab = 'Global Active Power (kilowatts)',main = "Global Active Power")
 dev.off()
